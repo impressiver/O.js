@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>O.js - Embrace your Prototypes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Javascript app framework that embraces prototypical inheritence and dynamic object composition.">
+    <meta name="author" content="Ian White">
+
+    <!-- Le styles -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="lib/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="css/social_foundicons.css" rel="stylesheet">
+    <link href="css/entypo.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+    <!--[if lt IE 8]>
+      <link rel="stylesheet" href="css/social_foundicons_ie7.css">
+    <![endif]-->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#about">O.js</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#usage">Docs</a></li>
+              <li><a href="#api">API</a></li>
+              <li><a href="#examples">Examples</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">O.js</li>
+              <li id="nav-home"><a href="http://impressiver.github.com/O.js">Project Home</a></li>
+              <li id="nav-github"><a href="https://github.com/impressiver/O.js">Source (Github)</a></li>
+              <li id="nav-documentation" class="nav-header">Documentation</li>
+              <li id="nav-about"><a href="#about">About</a></li>
+              <li id="nav-usage"><a href="#usage">Getting Started</a></li>
+              <li id="nav-api"><a href="#api">API Reference</a></li>
+              <li id="nav-examples" class="nav-header">Examples</li>
+              <li id="nav-example-simple"><a href="#example-simple">Simple</a></li>
+              <li id="nav-example-options"><a href="#example-options">Override Options</a></li>
+              <li id="nav-example-events"><a href="#example-events">Event Listeners</a></li>
+            </ul>
+          </div><!--/.well -->
+
+          <div class="sidebar-nav">
+            <a name="get-ojs"></a>
+            <ul class="btn-group big">
+              <li class="btn" id="btn-github"><i class="foundicon-github"></i>View on <span class="title">Github</span></li>
+              <li class="btn" id="btn-tarball"><i class="entypo-arrow-down"></i>Download <span class="title">TAR Ball</span></li>
+            </ul>
+          </div>
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <a name="about"></a>
+            <h1>O.js</h1>
+            <p class="plug">Ian White</p>
+            <p class="lead">O.js is a Javascript web application framework and object manipulation library that makes it easy to combine prototypical inheritance (extend) and object composition (mixin).</p>
+            <p class="note"><strong>O.js is still experimental. All the things may (and probably will) change.</strong></p>
+          </div>
+
+          <div id="usage-container" class="row-fluid section">
+              <a name="usage"></a>
+              <h2>Getting Started</h2>
+              <p>
+                <ol class="howto">
+                  <li>Download O.js (<a href="https://github.com/impressiver/O.js/tarball/master">TAR</a> or via <a href="https://github.com/impressiver/O.js">Github</a>) and put the files somewhere within your project resource path.</li>
+                  <li>
+                    Include the JS for jQuery and O.js at the <em>end</em> of the <code>BODY</code>:
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  ...
+  &lt;script src="/path/to/js/jquery.js"&gt;&lt;/script&gt;
+  &lt;!-- Right about here should do the trick --&gt;
+  &lt;script src="/path/to/js/O.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+                    <span class="label label-info">Heads up!</span> O.js also works with your favorite browser-based <a href="http://requirejs.org/docs/whyamd.html" target="_blank">AMD</a> script loaders, like RequireJS.
+                  </li>
+                </ol>
+              </p>
+          </div><!--/row-->
+          <hr/>
+          <div id="coming-soon-container" class="row-fluid section">
+            <a name="coming-soon"></a>
+            <h2>Documentation is on the way...</h2>
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Impressiver 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+      <!-- GitHub ribbon -->
+      <a href="https://github.com/impressiver/O.js"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    </div><!--/.wrapper-->
+
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the page loads faster -->
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="lib/google-code-prettify/prettify.js"></script>
+
+    <script src="../build/O.js"></script>
+    <script language="javascript">
+      /**
+       * Helper Functions
+       */
+
+      // View source of current page in a new window
+      function viewsource(e){
+        window.open("view-source:" + window.location, 'o.js.source');
+      }
+
+      // Smooth scroll to anchor
+      function scrollTo(e) {
+        e.preventDefault();
+
+        var anchor = e.currentTarget.hash.slice(1);
+            $t = $('a[name=' + anchor + ']');
+
+        if (!$t.size()) return;
+
+        var dvh = $(window).height(),
+            dvtop = $(window).scrollTop(),
+            eltop = $t.offset().top,
+            mgn = {top: 100, bottom: 100};
+
+        var scrollTo = eltop - mgn.top;
+
+        $('html,body').animate({
+          scrollTop: scrollTo
+        }, {
+          duration: 500
+        });
+      }
+
+      // Examples
+      var examples = {};
+
+      // Fill a <pre> with the example source
+      function loadExampleSource(i, script) {
+        var example = $(this).attr('class').match(/example-[^\s]+/i);
+        $('pre.' + example).html($.trim($(this).html()));
+      }
+
+      // Load an example
+      function loadExample(e) {
+        e.preventDefault();
+
+        //TODO: Run example code here...
+      }
+
+      
+      // Bootstrap the Javascripts
+      
+        // Fill the example <pre> blocks
+        $('script.example').each(loadExampleSource);
+
+        // Make the <pre> blocks look nice
+        prettyPrint();
+
+        // Activate "Try It" buttons
+        $('a.example').on('click', loadExample);
+
+        // Smoove scroll to anchor links
+        $('a[href^=#]').on('click', scrollTo);
+
+        // Activate the source buttons
+        $('#btn-github').on('click', function (e) {
+          e.preventDefault;
+          window.location = 'https://github.com/impressiver/O.js';
+        });
+        $('#btn-tarball').on('click', function (e) {
+          e.preventDefault;
+          window.location = 'https://github.com/impressiver/O.js/tarball/master';
+        });
+    </script>
+  </body>
+</html>
